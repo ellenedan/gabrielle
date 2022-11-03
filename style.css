@@ -8,12 +8,14 @@ body {
 .card {
   display: flex;
   max-width: 600px;
-  height: 450px;
   border-radius: 10px;
   overflow: hidden;
+  flex-direction: column;
+  height: auto;
+  margin: 1rem;
 }
 .picture {
-  width: 50%;
+  width: auto;
 }
 .image {
   object-fit: cover;
@@ -22,18 +24,19 @@ body {
   flex: 1;
 }
 .info {
-  width: 50%;
+  width: auto;
   display: flex;
   background-color: #fff;
   padding: 2rem;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  gap: 1rem;
 }
-h2 {
+.first-line {
   color: #8a8a90;
   letter-spacing: 0.3rem;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -47,12 +50,12 @@ h1 {
   line-height: 1em;
   margin: 0;
 }
-p {
+.description  {
   color: #8a8a90;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.7em;
 }
 .button {
@@ -77,31 +80,24 @@ p {
   align-items: center;
 }
 .price-new {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: "Fraunces", serif;
   font-weight: 700;
   color: #3d8168;
 }
 .price-sale {
-  text-decoration: line-through;
   padding-left: 25px;
   color: #8a8a90;
 }
-@media (max-width: 500px) {
+@media (min-width: 500px) {
   .card {
-    flex-direction: column;
-    height: auto;
-    margin: 1rem;
+    flex-direction: row;
+    height: 450px;
   }
   .info, .picture {
-    width: auto;
+    width: 50%;
   }
   .info {
-    gap: 1rem;
-  }
-  .image {
-  width: 100%;
+    gap: 0;
   }
 }
-
-
